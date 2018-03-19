@@ -6,7 +6,7 @@ import {ProvisionListComponent} from './provision/provision-list/provision-list.
 import {CreateProvisionComponent} from './provision/create-provision/create-provision.component';
 import {ProvisionDetailComponent} from './provision/provision-detail/provision-detail.component';
 import {CustomerListComponent} from './customer/customer-list/customer-list.component';
-import {CreateUserComponent} from './user/create-user/create-user.component';
+import {CreateUserComponent} from './account/create-user/create-user.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},

@@ -2,10 +2,9 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
 import {MDBBootstrapModule} from 'angular-bootstrap-md';
 import {AppRoutingModule} from './app-routing.module';
-import {CreateUserComponent} from './user/create-user/create-user.component';
+import {CreateUserComponent} from './account/create-user/create-user.component';
 import {AppComponent} from './app.component';
 import {LoginComponent} from './account/login/login.component';
-import {RegisterComponent} from './account/register/register.component';
 import {HeaderComponent} from './global/header/header.component';
 import {NavigatorComponent} from './global/navigator/navigator.component';
 import {CreateProvisionComponent} from './provision/create-provision/create-provision.component';
@@ -37,7 +36,6 @@ import { EditCustomerDataService } from './services/edit-customer-data.service';
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent,
     HeaderComponent,
     NavigatorComponent,
     CreateProvisionComponent,

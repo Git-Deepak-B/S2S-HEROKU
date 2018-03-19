@@ -24,7 +24,7 @@ export class UserStoreService {
     this._userSubject.next(null);
   }
 
-  getUservalue(): User {
+  getUserValue(): User {
     return this._userSubject.getValue();
   }
 }

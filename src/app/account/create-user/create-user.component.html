@@ -1,0 +1,156 @@
+<!-- ============================================================== -->
+<!-- Page wrapper  -->
+<!-- ============================================================== -->
+<div class="page-wrapper">
+  <!-- ============================================================== -->
+  <!-- Container fluid  -->
+  <!-- ============================================================== -->
+  <div class="container-fluid">
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="row page-titles">
+      <div class="col-md-5 align-self-center">
+        <h4 class="text-themecolor">Add New User</h4>
+      </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Start Page Content -->
+    <!-- ============================================================== -->
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+            <form [formGroup]="createUserForm" #f="ngForm" (ngSubmit)="addUser(f.value)">
+              <div class="text-danger alert" *ngIf="createUserForm.errors">
+                {{createUserForm.errors.message}}
+              </div>
+
+              <div mdbModal #addUserSuccessModal="mdb-modal" class="modal fade" id="add-user-success-modal"
+                   tabindex="-1" role="dialog"
+                   aria-labelledby="Edit Customer" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <div class="col-md-12 text-center">
+                        User added successfully and email is sent.
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <div class="col-md-12 text-center">
+                        <button type="button" class="btn btn-danger" (click)="addUserSuccessModal.hide()">
+                          <span aria-hidden="true">&times;</span> Cancel
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+                <div [ngClass]="{'form-group': true,  'has-danger' : firstName.touched && firstName.invalid}">
+                  <label for="new-user-first-name">First Name :</label>
+                  <input type="text" id="new-user-first-name" formControlName="firstName" class="form-control"
+                         placeholder="enter first name">
+                  <div class="form-control-feedback"
+                       *ngIf="firstName.touched && firstName.invalid && firstName.errors.required">
+                    First Name is required
+                  </div>
+                  <div class="form-control-feedback"
+                       *ngIf="firstName.touched && firstName.invalid && firstName.errors.pattern">
+                    First Name should contain only alphabets
+                  </div>
+                </div>
+
+                <div [ngClass]="{'form-group': true, 'has-danger' : lastName.touched && lastName.invalid}">
+                  <label for="new-user-last-name">Last Name :</label>
+                  <input type="text" id="new-user-last-name" formControlName="lastName" class="form-control"
+                         placeholder="enter last name">
+                  <div class="form-control-feedback"
+                       *ngIf="lastName.touched && lastName.invalid && lastName.errors.required">
+                    First Name is required
+                  </div>
+                  <div class="form-control-feedback"
+                       *ngIf="lastName.touched && lastName.invalid && lastName.errors.pattern">
+                    First Name should contain only alphabets
+                  </div>
+                </div>
+
+                <div [ngClass]="{'form-group': true, 'has-danger' : email.touched && email.invalid}">
+                  <label for="new-user-email">Email :</label>
+                  <input type="new-user-email" id="email" formControlName="email" class="form-control"
+                         placeholder="enter email">
+                  <div class="form-control-feedback" *ngIf="email.touched && email.invalid && email.errors.required">
+                    Email is required
+                  </div>
+                  <div class="form-control-feedback "
+                       *ngIf="email.touched && email.invalid && email.errors.emailFormat">
+                    Email is not in valid format
+                  </div>
+                </div>
+
+                <div [ngClass]="{'form-group': true, 'has-danger' : password.touched && password.invalid}">
+                  <label for="new-user-password">Password :</label>
+                  <input type="password" id="new-user-password" formControlName="password" class="form-control"
+                         placeholder="enter password">
+                  <div class="form-control-feedback"
+                       *ngIf="password.touched && password.invalid && password.errors.required">
+                    Password is required
+                  </div>
+                </div>
+
+                <div
+                  [ngClass]="{'form-group': true, 'has-danger' : confirmPassword.touched && confirmPassword.invalid}">
+                  <label for="new-user-confirm-password">Confirm Password :</label>
+                  <input type="password" id="new-user-confirm-password" formControlName="confirmPassword"
+                         class="form-control"
+                         placeholder="re-enter password">
+                  <div class="form-control-feedback"
+                       *ngIf="confirmPassword.touched && confirmPassword.invalid && confirmPassword.errors.required">
+                    Password is required
+                  </div>
+                </div>
+
+                <div [ngClass]="{'form-group': true, 'has-danger' : type.touched && type.invalid}">
+                  <label for="new-user-type">User Type </label>
+                  <select formControlName="type" id="new-user-type" class="form-control" [(ngModel)]="defaultType">
+                    <option value="customer">Customer</option>
+                    <option value="admin">Admin</option>
+                  </select>
+                </div>
+
+                <div [ngClass]="{'form-group': true, 'has-danger' : company.touched && company.invalid}"
+                     *ngIf="type.value === 'customer'">
+                  <label for="new-user-company">Company Name</label>
+                  <select formControlName="company" id="new-user-company" class="form-control" [(ngModel)]="defaultCompany">
+                    <option value="s2s">S2S Communications</option>
+                    <option value="Gibi">Gibi Systems</option>
+                    <option value="Company1">Company1</option>
+                    <option value="Company1">Company XYZ</option>
+                    <option value="Company1">Company ABC</option>
+                    <option value="Company1">Company XXX</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <div class="form-actions">
+                    <button type="submit" class="btn btn-success"><span class="fa fa-save fa-lg"></span> Save</button>
+                    <button type="button" class="btn btn-danger"><span aria-hidden="true">&times;</span> Cancel</button>
+                  </div>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End PAge Content -->
+    <!-- ============================================================== -->
+  </div>
+  <!-- ============================================================== -->
+  <!-- End Container fluid  -->
+  <!-- ============================================================== -->
+</div>
+<!-- ============================================================== -->
+<!-- End Page wrapper  -->
+<!-- ============================================================== -->
