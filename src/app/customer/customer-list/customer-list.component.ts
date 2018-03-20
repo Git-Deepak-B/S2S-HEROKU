@@ -72,7 +72,7 @@ export class CustomerListComponent implements OnInit {
 
   onResetPassword() {
     this._userService.sendForgotPwdEmail(this.resetPasswordCustomer.email).subscribe(data =>
-      data.posted ? this.resetPasswordSuccessModal.show() :
+      this.resetPasswordCustomer.email && data.posted ? this.resetPasswordSuccessModal.show() :
         console.log('An Error Occurred in triggering forgot password email!!' + this.resetPasswordCustomer.email));
   }
 }
