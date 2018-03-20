@@ -19,3 +19,13 @@ TODO
 1. unsaved data modal for all forms (link cancel and other route clicks to this) - may be new
 Subject to trigger this modal in one global place?
 2. loader/spinner for each page?
+3. include below js files?
+  <!--Wave Effects -->
+    <script src="dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="dist/js/custom.min.js"></script>
+    <!-- Dashboard 1 JS -->
+    <script src="dist/js/dashboard1.js"></script>
+4.
