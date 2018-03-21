@@ -17,8 +17,6 @@ export class CreateUserComponent implements OnInit {
     firstName: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z]*$')]),
     lastName: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z]*$')]),
     email: new FormControl('', [Validators.required, GlobalValidator.emailFormat]),
-    password: new FormControl('', [Validators.required]),
-    confirmPassword: new FormControl('', [Validators.required]),
     type: new FormControl('', [Validators.required]),
     company: new FormControl()
   });
@@ -57,14 +55,6 @@ export class CreateUserComponent implements OnInit {
 
   get email() {
     return this.createUserForm.get('email');
-  }
-
-  get password() {
-    return this.createUserForm.get('password');
-  }
-
-  get confirmPassword() {
-    return this.createUserForm.get('confirmPassword');
   }
 
   get type() {

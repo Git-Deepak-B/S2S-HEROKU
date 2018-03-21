@@ -11,7 +11,7 @@
     <!-- ============================================================== -->
     <div class="row page-titles">
       <div class="col-md-5 align-self-center">
-        <h4 class="text-themecolor">Register User</h4>
+        <h4 class="text-themecolor">Add User</h4>
       </div>
     </div>
     <!-- ============================================================== -->
@@ -49,7 +49,7 @@
 
 
                 <div [ngClass]="{'form-group': true,  'has-danger' : firstName.touched && firstName.invalid}">
-                  <label for="new-user-first-name">First Name :</label>
+                  <label for="new-user-first-name" class="required">First Name</label>
                   <input type="text" id="new-user-first-name" formControlName="firstName" class="form-control"
                          placeholder="enter first name">
                   <div class="form-control-feedback"
@@ -63,7 +63,7 @@
                 </div>
 
                 <div [ngClass]="{'form-group': true, 'has-danger' : lastName.touched && lastName.invalid}">
-                  <label for="new-user-last-name">Last Name :</label>
+                  <label for="new-user-last-name" class="required">Last Name</label>
                   <input type="text" id="new-user-last-name" formControlName="lastName" class="form-control"
                          placeholder="enter last name">
                   <div class="form-control-feedback"
@@ -77,8 +77,8 @@
                 </div>
 
                 <div [ngClass]="{'form-group': true, 'has-danger' : email.touched && email.invalid}">
-                  <label for="new-user-email">Email :</label>
-                  <input type="new-user-email" id="email" formControlName="email" class="form-control"
+                  <label for="new-user-email" class="required">Email</label>
+                  <input type="text" id="new-user-email" formControlName="email" class="form-control"
                          placeholder="enter email">
                   <div class="form-control-feedback" *ngIf="email.touched && email.invalid && email.errors.required">
                     Email is required
@@ -89,30 +89,8 @@
                   </div>
                 </div>
 
-                <div [ngClass]="{'form-group': true, 'has-danger' : password.touched && password.invalid}">
-                  <label for="new-user-password">Password :</label>
-                  <input type="password" id="new-user-password" formControlName="password" class="form-control"
-                         placeholder="enter password">
-                  <div class="form-control-feedback"
-                       *ngIf="password.touched && password.invalid && password.errors.required">
-                    Password is required
-                  </div>
-                </div>
-
-                <div
-                  [ngClass]="{'form-group': true, 'has-danger' : confirmPassword.touched && confirmPassword.invalid}">
-                  <label for="new-user-confirm-password">Confirm Password :</label>
-                  <input type="password" id="new-user-confirm-password" formControlName="confirmPassword"
-                         class="form-control"
-                         placeholder="re-enter password">
-                  <div class="form-control-feedback"
-                       *ngIf="confirmPassword.touched && confirmPassword.invalid && confirmPassword.errors.required">
-                    Password is required
-                  </div>
-                </div>
-
                 <div [ngClass]="{'form-group': true, 'has-danger' : type.touched && type.invalid}">
-                  <label for="new-user-type">User Type </label>
+                  <label for="new-user-type" class="required">User Type </label>
                   <select formControlName="type" id="new-user-type" class="form-control" [(ngModel)]="defaultType">
                     <option value="customer">Customer</option>
                     <option value="admin">Admin</option>
@@ -121,7 +99,7 @@
 
                 <div [ngClass]="{'form-group': true, 'has-danger' : company.touched && company.invalid}"
                      *ngIf="type.value === 'customer'">
-                  <label for="new-user-company">Company Name</label>
+                  <label for="new-user-company" class="required">Company Name</label>
                   <select formControlName="company" id="new-user-company" class="form-control" [(ngModel)]="defaultCompany">
                     <option value="s2s">S2S Communications</option>
                     <option value="Gibi">Gibi Systems</option>

@@ -28,4 +28,6 @@ Subject to trigger this modal in one global place?
     <script src="dist/js/custom.min.js"></script>
     <!-- Dashboard 1 JS -->
     <script src="dist/js/dashboard1.js"></script>
-4.
+4. Add asterisk for mandatory fields in all forms (currently done only for create request) - DONE
+5. Add validation for all forms (currently done only for create user)
+6.

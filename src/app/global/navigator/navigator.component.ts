@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {NAVITEMS} from '../../../assets/data/nav-items';
 import {User} from '../../common/types/User';
 import {UserStoreService} from '../../stores/user-store.service';
-import {FormControl, FormControlName, FormGroup, Validators} from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-navigator',

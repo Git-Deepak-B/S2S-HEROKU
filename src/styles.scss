@@ -2,11 +2,13 @@
 .page-wrapper {
   padding-top: 64px;
 }
+
 @media (min-width: 1024px) {
   .footer, .page-wrapper {
     margin-left: 220px;
   }
 }
+
 .page-wrapper {
   background: #edf1f5;
   position: relative;
@@ -23,6 +25,11 @@
 
 .dataTables_filter {
   float: left;
+}
+
+label.required:after {
+  content: " *";
+  color: red;
 }
 
 

@@ -21,11 +21,11 @@ export class CreateProvisionComponent implements OnInit {
     siteContact: new FormControl('', []),
     siteContactPhone: new FormControl('', []),
     addressLine1: new FormControl('', [Validators.required]),
-    addressLine2: new FormControl('', [Validators.required]),
+    addressLine2: new FormControl('', []),
     city: new FormControl('', [Validators.required]),
     state: new FormControl('', [Validators.required]),
     zipCode: new FormControl('', [Validators.required]),
-    country: new FormControl('', [Validators.required]),
+    country: new FormControl('USA', [Validators.required]),
     createdBy: new FormControl(this.user && this.user.username, [Validators.required]),
     circuitPurpose: new FormControl('', [Validators.required]),
     comments: new FormControl('', [])
