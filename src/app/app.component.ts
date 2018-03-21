@@ -14,6 +14,6 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit() {
-    this._userStore.setUser(MockUsers.users[0]);
+    // this._userStore.setUser(MockUsers.users[0]);
   }
 }
