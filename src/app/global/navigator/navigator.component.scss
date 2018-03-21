@@ -66,30 +66,11 @@
 }
 
 .sidebar-nav ul li.nav-small-cap {
-  font-size: 1rem;
-  margin-bottom: 0;
-  padding: 0 14px 14px 0;
-  color: #6c757d;
-  font-weight: 500;
-}
-
-.sidebar-nav > ul > li {
-  margin-bottom: 8px;
-  margin-top: 8px;
+  padding: 0;
 }
 
 .sidebar-nav ul li {
   list-style: none;
-}
-
-.sidebar-nav .waves-effect {
-  transition: none;
-  -webkit-transition: none;
-  -o-transition: none;
-}
-
-.sidebar-nav > ul > li > a {
-  border-left: 3px solid transparent;
 }
 
 .sidebar-nav ul li a {
@@ -97,13 +78,11 @@
   padding: 10px 35px 10px 15px;
   display: block;
   align-items: center;
-  font-size: 15px;
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .sidebar-nav > ul > li > a i {
-  width: 25px;
-  font-size: 16px;
   display: inline-block;
   vertical-align: middle;
 }

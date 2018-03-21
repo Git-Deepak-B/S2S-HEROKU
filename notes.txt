@@ -9,7 +9,7 @@ user object containing userId, email, role, company name etc.
 2. Get Requests
 parameters:
 string userId - if passed, requests will be filtered to that user. when not passed, pull all requests. mandatory for customers.
-string companyName - if passed, requests will be filtered to that company. mandatory for customers.
+string company - if passed, requests will be filtered to that company. mandatory for customers.
 string searchText - if passed, backend will query with LIKE clause on company name, site id, service address, current status
 boolean recentOnly -  if true, backend will return X number of recent requests
 

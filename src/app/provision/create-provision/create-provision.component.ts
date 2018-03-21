@@ -11,11 +11,12 @@ import {UserStoreService} from '../../stores/user-store.service';
 })
 export class CreateProvisionComponent implements OnInit {
 
+  isCustomer;
   user: User;
 
   createProvisionForm = new FormGroup({
-    companyName: new FormControl(this.user && this.user.role === 'customer' ? this.user.company : '', [Validators.required]),
-    email: new FormControl(this.user && this.user.role === 'customer' ? this.user.email : '', [GlobalValidator.emailFormat]),
+    company: new FormControl(this.isCustomer ? this.user.company : '', [Validators.required]),
+    email: new FormControl(this.isCustomer ? this.user.email : '', [GlobalValidator.emailFormat]),
     siteId: new FormControl('', [Validators.required]),
     locationPhone: new FormControl('', [Validators.required]),
     siteContact: new FormControl('', []),
@@ -35,11 +36,18 @@ export class CreateProvisionComponent implements OnInit {
   }
 
   ngOnInit() {
-    this._userStore.getUser().subscribe(user => this.user = user);
+    this._userStore.getUser().subscribe(user => {
+      this.user = user;
+      this.isCustomer = user.role === 'customer';
+      // pre-populate company and email for customers
+      if (this.isCustomer) {
+        this.createProvisionForm.patchValue(user);
+      }
+    });
   }
 
-  get companyName() {
-    return this.createProvisionForm.get('companyName');
+  get company() {
+    return this.createProvisionForm.get('company');
   }
 
   get email() {

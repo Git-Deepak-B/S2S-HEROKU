@@ -19,13 +19,7 @@ export class CustomerListComponent implements OnInit {
     company: new FormControl('', [Validators.required]),
     firstName: new FormControl('', [Validators.required]),
     lastName: new FormControl('', [Validators.required]),
-    email: new FormControl('', [Validators.required]),
-    // Below fields are added just to satisfy 'setValue()' call in in ngOnInit.
-    // Not displayed in view component.
-    password: new FormControl(''),
-    confirmPassword: new FormControl(''),
-    role: new FormControl(''),
-    token: new FormControl('')
+    email: new FormControl('', [Validators.required])
   });
 
   constructor(private _userService: UserService,
@@ -39,7 +33,7 @@ export class CustomerListComponent implements OnInit {
     });
     this._editCustomerService.updateCustomer.subscribe(customer => {
       this.updateCustomer = customer;
-      this.updateCustomerForm.setValue(customer);
+      this.updateCustomerForm.patchValue(customer);
       this.updateCustomerModal.show();
     });
   }
