@@ -1,8 +1,10 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {GlobalValidator} from '../../common/validator/GlobalValidator';
 import {User} from '../../common/types/User';
 import {UserStoreService} from '../../stores/user-store.service';
+import {Router} from '@angular/router';
+import {ModalDirective} from 'angular-bootstrap-md/modals/modal.directive';
 
 @Component({
   selector: 'app-create-provision',
@@ -10,7 +12,7 @@ import {UserStoreService} from '../../stores/user-store.service';
   styleUrls: ['./create-provision.component.scss']
 })
 export class CreateProvisionComponent implements OnInit {
-
+  @ViewChild('unsavedFormModal') unsavedFormModal: ModalDirective;
   isCustomer;
   user: User;
 
@@ -32,7 +34,8 @@ export class CreateProvisionComponent implements OnInit {
     comments: new FormControl('', [])
   });
 
-  constructor(private _userStore: UserStoreService) {
+  constructor(private _userStore: UserStoreService,
+              private _router: Router) {
   }
 
   ngOnInit() {
@@ -108,5 +111,17 @@ export class CreateProvisionComponent implements OnInit {
 
   createProvision(provisionForm) {
     console.log(provisionForm);
+  }
+
+  onCancel() {
+    this.createProvisionForm.dirty ? this.showExitPageModal() : this._router.navigate(['/dash']);
+  }
+
+  showExitPageModal() {
+    this.unsavedFormModal.show();
+  }
+
+  exitPage(exit) {
+    exit ? this._router.navigate(['/dash']) : this.unsavedFormModal.hide();
   }
 }

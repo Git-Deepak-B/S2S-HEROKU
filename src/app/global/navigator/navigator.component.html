@@ -14,7 +14,7 @@
                     <p class="card-text">{{user.firstName}} {{user.lastName}}</p>
                     <small class="text-muted"><i class="fa fa-envelope"></i>Email Address</small>
                     <p class="card-text">{{user.email}}</p>
-                    <button class="btn btn-primary btn-block waves-effect waves-dark" (click)="updateProfile.show()"
+                    <button class="btn btn-outline-success waves-effect waves-dark" (click)="updateProfile.show()"
                             data-toggle="modal"
                             data-target="#updateProfile" mdbRippleRadius><i
                       class="fa fa-pencil-square-o"></i><span class="hide-menu">Edit Profile</span>
@@ -30,7 +30,7 @@
         <!-- TODO - need to add admin condition to display navItem.adminOnly links... -->
         <li *ngFor="let navItem of navItems" routerLink="{{ navItem.href }}" routerLinkActive="active">
           <a class="waves-effect waves-dark" *ngIf="!navItem.adminOnly || (navItem.adminOnly && user.role === 'admin')">
-            <i class="ti-layout-grid2"></i>
+            <i class="{{navItem.icon}}"></i>
             <span class="hide-menu"> {{ navItem.name }}</span>
           </a>
         </li>
@@ -51,7 +51,7 @@
         <div class="modal-header">
           <h4 class="modal-title">Edit Profile</h4>
           <button type="button" class="close" aria-label="Close" (click)="updateProfile.hide()">
-            <span aria-hidden="true">&times;</span>
+            <span class="fa fa-times"></span>
           </button>
         </div>
         <div class="modal-body">
@@ -85,10 +85,10 @@
         <div class="modal-footer">
           <div class="col-md-12 text-center">
             <button type="submit" class="btn btn-primary">
-              <span class="fa fa-save fa-lg"></span> Save
+              <span class="fa fa-check"></span> Save
             </button>
             <button type="button" class="btn btn-danger" (click)="updateProfile.hide()">
-              <span aria-hidden="true">&times;</span> Close
+              <span class="fa fa-times"></span> Close
             </button>
           </div>
         </div>

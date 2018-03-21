@@ -4,26 +4,31 @@ export const NAVITEMS: NavItem[] = [
   {
     name: 'Dashboard',
     adminOnly: false,
-    href: '/dash'
+    href: '/dash',
+    icon: 'ti-layout-grid2'
   },
   {
     name: 'Create Request',
     adminOnly: false,
-    href: '/provision/create'
+    href: '/provision/create',
+    icon: 'ti-comment-alt'
   },
   {
     name: 'View All Requests',
     adminOnly: false,
-    href: '/provisions'
+    href: '/provisions',
+    icon: 'ti-support'
   },
   {
     name: 'View Customers',
     adminOnly: true,
-    href: '/customers'
+    href: '/customers',
+    icon: 'ti-mobile'
   },
   {
     name: 'Register User',
     adminOnly: true,
-    href: '/user/create'
+    href: '/user/create',
+    icon: 'ti-book'
   },
 ];
