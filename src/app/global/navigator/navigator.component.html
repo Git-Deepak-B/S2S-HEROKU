@@ -14,9 +14,9 @@
                     <p class="card-text">{{user.firstName}} {{user.lastName}}</p>
                     <small class="text-muted"><i class="fa fa-envelope"></i>Email Address</small>
                     <p class="card-text">{{user.email}}</p>
-                    <button class="btn btn-outline-success waves-effect waves-dark" (click)="updateProfile.show()"
+                    <button class="btn btn-outline-success ripple" (click)="updateProfile.show()"
                             data-toggle="modal"
-                            data-target="#updateProfile" mdbRippleRadius><i
+                            data-target="#updateProfile"><i
                       class="fa fa-pencil-square-o"></i><span class="hide-menu">Edit Profile</span>
                     </button>
                 </div>
@@ -29,7 +29,7 @@
         <li class="nav-small-cap"> --- MAIN MENU</li>
         <!-- TODO - need to add admin condition to display navItem.adminOnly links... -->
         <li *ngFor="let navItem of navItems" routerLink="{{ navItem.href }}" routerLinkActive="active">
-          <a class="waves-effect waves-dark" *ngIf="!navItem.adminOnly || (navItem.adminOnly && user.role === 'admin')">
+          <a class="ripple" *ngIf="!navItem.adminOnly || (navItem.adminOnly && user.role === 'admin')">
             <i class="{{navItem.icon}}"></i>
             <span class="hide-menu"> {{ navItem.name }}</span>
           </a>

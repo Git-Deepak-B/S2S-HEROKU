@@ -21,6 +21,7 @@
       "styles": [
         "assets/styles/custom-style.scss",
         "../node_modules/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css",
+        "../node_modules/css-ripple-effect/dist/ripple.css",
         "styles.scss"
       ],
       "scripts": [

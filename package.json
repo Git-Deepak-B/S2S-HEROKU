@@ -27,6 +27,7 @@
     "bootstrap-material-datetimepicker": "^2.7.3",
     "chart.js": "2.5.0 ",
     "core-js": "^2.4.1",
+    "css-ripple-effect": "^1.0.5",
     "datatables.net": "^1.10.16",
     "datatables.net-dt": "^1.10.16",
     "font-awesome": "4.7.0",
