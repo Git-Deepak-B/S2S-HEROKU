@@ -6,6 +6,7 @@ import {ServiceResponse} from '../../common/types/ServiceResponse';
 import {Router} from '@angular/router';
 import {UserService} from '../../services/user.service';
 import {ModalDirective} from 'angular-bootstrap-md/modals/modal.directive';
+import {SpinnerService} from '../../common/overlay-spinner/spinner.service';
 
 @Component({
   selector: 'app-login',
@@ -26,7 +27,8 @@ export class LoginComponent implements OnInit {
 
   constructor(private _authService: AuthorizationService,
               private _userService: UserService,
-              private _router: Router) {
+              private _router: Router,
+              private _spinner: SpinnerService) {
   }
 
   ngOnInit() {
@@ -48,13 +50,18 @@ export class LoginComponent implements OnInit {
   signIn(credentials: LoginForm) {
     console.log(credentials.username);
     console.log(credentials.password);
+    this._spinner.show();
     this._authService.loginUser(credentials).subscribe((resp: ServiceResponse) => {
+      this._spinner.hide();
       if (resp.status) {
         this._router.navigate(['dash']);
       } else {
         this.setLoginError(resp.error);
       }
-    }, errResp => this.setLoginError(errResp.error));
+    }, errResp => {
+      this._spinner.hide();
+      this.setLoginError(errResp.error);
+    });
   }
 
   setLoginError(error: String): void {
