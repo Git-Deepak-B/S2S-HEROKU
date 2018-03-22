@@ -3,6 +3,7 @@
     "id": 1,
     "username": "mramanathan",
     "company": "Gibi Systems",
+    "email":"mramanathan@gibisystems.com",
     "location": {
       "addressLine1": "2442 courtney oaks rd",
       "addressLine2": "suite# 123",
@@ -30,6 +31,7 @@
     "id": 2,
     "username": "mramanathan",
     "company": "Gibi Systems",
+    "email":"mramanathan@gibisystems.com",
     "location": {
       "addressLine1": "640 parkaire ln",
       "addressLine2": "suite# 808",
@@ -50,6 +52,7 @@
     "id": 3,
     "username": "mramanathan",
     "company": "Gibi systems",
+    "email":"mramanathan@gibisystems.com",
     "location": {
       "addressLine1": "957 atlantic ave",
       "addressLine2": "suite# c",
@@ -70,6 +73,7 @@
     "id": 4,
     "username": "mramanathan",
     "company": "Gibi systems",
+    "email":"mramanathan@gibisystems.com",
     "location": {
       "addressLine1": "6270 courtney park rd",
       "addressLine2": "suite# 7109",
@@ -89,6 +93,7 @@
   {
     "id": 5,
     "username": "mramanathan",
+    "email":"mramanathan@gibisystems.com",
     "company": "Gibi systems",
     "location": {
       "addressLine1": "2080 hassel rd",
@@ -110,6 +115,7 @@
     "id": 11,
     "username": "psrinivasan",
     "company": "Focus point",
+    "email":"psrinivasan@gibisystems.com",
     "location": {
       "addressLine1": "2442 courtney oaks rd",
       "addressLine2": "suite# 123",
@@ -137,6 +143,7 @@
     "id": 12,
     "username": "psrinivasan",
     "company": "Focus point",
+    "email":"psrinivasan@gibisystems.com",
     "location": {
       "addressLine1": "640 parkaire ln",
       "addressLine2": "suite# 808",
@@ -157,6 +164,7 @@
     "id": 13,
     "username": "kravichandran",
     "company": "Focus point",
+    "email":"kravichandran@gibisystems.com",
     "location": {
       "addressLine1": "957 atlantic ave",
       "addressLine2": "suite# c",
@@ -177,6 +185,7 @@
     "id": 14,
     "username": "deepak",
     "company": "Gibi systems",
+    "email":"deepak@gibisystems.com",
     "location": {
       "addressLine1": "6270 courtney park rd",
       "addressLine2": "suite# 7109",
@@ -197,6 +206,7 @@
     "id": 15,
     "username": "kravichandran",
     "company": "Gibi systems",
+    "email":"kravichandran@gibisystems.com",
     "location": {
       "addressLine1": "2080 hassel rd",
       "addressLine2": "suite# 609",
@@ -217,6 +227,7 @@
     "id": 16,
     "username": "psrinivasan",
     "company": "Gibi systems",
+    "email":"psrinivasan@gibisystems.com",
     "location": {
       "addressLine1": "2080 hassel rd",
       "addressLine2": "suite# 609",

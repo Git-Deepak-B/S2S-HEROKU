@@ -1,0 +1,32 @@
+.status-circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  color: white;
+  background-color: gray;
+  border-color: #86B63E !important;
+  border-style: solid;
+  border-width: 3px;
+  text-align: center;
+  overflow: hidden;
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+}
+
+.status-active {
+  background-color: #86B63E;
+}
+
+
+.line {
+  width: 70%;
+  height: 70px;
+  border-bottom: 5px solid gray;
+  margin-left: 10%;
+  position: absolute;
+}
+
+.wizard-cntr {
+  margin: 3em 0;
+}

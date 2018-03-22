@@ -31,3 +31,7 @@ Subject to trigger this modal in one global place?
 4. Add asterisk for mandatory fields in all forms (currently done only for create request) - DONE
 5. Add validation for all forms (currently done only for create user)
 6. Add on-submit success/error message for all forms
+7. Integrate waves Effects
+8. Provision create
+9. Auth guard for all the url and check the refresh page
+10. Form validations
