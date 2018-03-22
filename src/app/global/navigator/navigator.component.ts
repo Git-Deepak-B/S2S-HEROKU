@@ -30,7 +30,7 @@ export class NavigatorComponent implements OnInit {
   }
 
   updateUser(updateUserForm) {
-    console.log(updateUserForm);
+    console.log(JSON.stringify(updateUserForm));
     // TODO call api to update user here...
     // TODO check why only updated fields are being populated here...
   }

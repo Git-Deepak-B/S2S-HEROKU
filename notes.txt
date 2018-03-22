@@ -1,20 +1,3 @@
-1. User Service - authenticate
-parameters:
-string userId - mandatory
-string password - mandatory
-
-returns:
-user object containing userId, email, role, company name etc.
-
-2. Get Requests
-parameters:
-string userId - if passed, requests will be filtered to that user. when not passed, pull all requests. mandatory for customers.
-string company - if passed, requests will be filtered to that company. mandatory for customers.
-string searchText - if passed, backend will query with LIKE clause on company name, site id, service address, current status
-boolean recentOnly -  if true, backend will return X number of recent requests
-
-
-
 TODO
 1. unsaved data modal for all forms (link cancel and other route clicks to this) - may be new
 Subject to trigger this modal in one global place?
@@ -35,3 +18,5 @@ Subject to trigger this modal in one global place?
 8. Provision create
 9. Auth guard for all the url and check the refresh page
 10. Form validations
+11. request details page - when to enable/disable certain fields???
+12.

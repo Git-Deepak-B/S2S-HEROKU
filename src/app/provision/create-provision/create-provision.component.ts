@@ -110,7 +110,7 @@ export class CreateProvisionComponent implements OnInit {
   }
 
   createProvision(provisionForm) {
-    console.log(provisionForm);
+    console.log(JSON.stringify(provisionForm));
   }
 
   onCancel() {

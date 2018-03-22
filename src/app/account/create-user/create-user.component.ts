@@ -30,6 +30,7 @@ export class CreateUserComponent implements OnInit {
   }
 
   addUser(userInfo) {
+    console.log(JSON.stringify(userInfo));
     this._accountService.addUser(userInfo).subscribe((response: any) => {
       if (response && response.type) {
         if (this._userStore.getUserValue()) {
