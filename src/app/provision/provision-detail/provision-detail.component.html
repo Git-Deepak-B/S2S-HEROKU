@@ -52,267 +52,263 @@
     </div>
 
     <form [formGroup]="provisionForm" #f="ngForm">
-        <div class="row">
-          <div class="col-12">
-            <div class="card">
-              <div class="card-header">
-                Prequal/Quoting Information
-              </div>
-              <div class="card-body">
-                  <div class="form-body" >
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="control-label">Company Name*</label>
-                          <input type="text" formControlName="company" class="form-control" readonly>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="control-label">Email*</label>
-                          <input type="text" class="form-control" formControlName="email" readonly>
-                        </div>
-                      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+              Prequal/Quoting Information
+            </div>
+            <div class="card-body">
+              <div class="form-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="control-label">Company Name*</label>
+                      <input type="text" formControlName="company" class="form-control" readonly>
                     </div>
-                    <!--/row-->
-                    <div class="row">
-                      <div class="col-md-3">
-                        <div class="form-group">
-                          <label class="control-label">Site ID*</label>
-                          <input type="text" formControlName="siteId" class="form-control" value="123" readonly>
-                        </div>
-                      </div>
-                      <div class="col-md-3">
-                        <div class="form-group">
-                          <label class="control-label">Location Phone #</label>
-                          <input type="text" formControlName="locationPhone" class="form-control" readonly>
-                        </div>
-                      </div>
-                      <div class="col-md-3">
-                        <div class="form-group">
-                          <label class="control-label">Site Contact</label>
-                          <input type="text" formControlName="siteContact" class="form-control" readonly>
-                        </div>
-                      </div>
-                      <div class="col-md-3">
-                        <div class="form-group">
-                          <label class="control-label">Site Contact Phone #</label>
-                          <input type="text" formControlName="siteContactPhone" class="form-control" readonly>
-                        </div>
-                      </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="control-label">Email*</label>
+                      <input type="text" class="form-control" formControlName="email" readonly>
                     </div>
-                    <!--/row-->
-                    <!--/row-->
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="control-label">Address Line 1*</label>
-                          <input type="text" formControlName="addressLine1" class="form-control" readonly>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="control-label">Created By</label>
-                          <input type="text" formControlName="createdBy"  class="form-control" readonly>
-                        </div>
-                      </div>
+                  </div>
+                </div>
+                <!--/row-->
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="control-label">Site ID*</label>
+                      <input type="text" formControlName="siteId" class="form-control" value="123" readonly>
                     </div>
-                    <!--/row-->
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="control-label">Address Line 2*</label>
-                          <input type="text" formControlName="addressLine2" class="form-control" readonly>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="control-label">Circuit Purpose</label>
-                          <select class="form-control" data-placeholder="Select Circuit Purpose" id="circuit_purpose" tabindex="1" readonly>
-                            <option value="Primary">Primary</option>
-                            <option value="Backup">Backup</option>
-                            <option value="VoIP">VoIP</option>
-                            <option value="Other">Other</option>
-                          </select>
-                        </div>
-                      </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="control-label">Location Phone #</label>
+                      <input type="text" formControlName="locationPhone" class="form-control" readonly>
                     </div>
-                    <!--/row-->
-                    <div class="row">
-                      <div class="col-md-3">
-                        <div class="form-group">
-                          <label class="control-label">City*</label>
-                          <input type="text" formControlName="city" class="form-control" readonly>
-                        </div>
-                      </div>
-                      <div class="col-md-3">
-                        <div class="form-group">
-                          <label class="control-label">State*</label>
-                          <select class="form-control" data-placeholder="Select State" tabindex="1" readonly>
-                            <option value="state">NC</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-3">
-                        <div class="form-group">
-                          <label class="control-label">Status*</label>
-                          <select class="form-control" data-placeholder="Select Status" tabindex="1" readonly="">
-                            <option value="Category 1">Prequal Request Received</option>
-                            <option value="Category 2" selected>Quote Provided</option>
-                            <option value="Category 3">Order Recieved</option>
-                            <option value="Category 4">Order Placed with ISP</option>
-                            <option value="Category 4">Circuit Installed, Details Sent to Customer</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-3">
-                        <div class="form-group">
-                          <label class="control-label">Quote Provided</label>
-                          <div class="input-group">
-                            <input type="text" id="quote_provided" class="form-control" value="06-01-2018">
-                            <div class="input-group-append">
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="control-label">Site Contact</label>
+                      <input type="text" formControlName="siteContact" class="form-control" readonly>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="control-label">Site Contact Phone #</label>
+                      <input type="text" formControlName="siteContactPhone" class="form-control" readonly>
+                    </div>
+                  </div>
+                </div>
+                <!--/row-->
+                <!--/row-->
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="control-label">Address Line 1*</label>
+                      <input type="text" formControlName="addressLine1" class="form-control" readonly>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="control-label">Created By</label>
+                      <input type="text" formControlName="createdBy" class="form-control" readonly>
+                    </div>
+                  </div>
+                </div>
+                <!--/row-->
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="control-label">Address Line 2*</label>
+                      <input type="text" formControlName="addressLine2" class="form-control" readonly>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="control-label">Circuit Purpose</label>
+                      <select class="form-control" data-placeholder="Select Circuit Purpose" id="circuit_purpose"
+                              tabindex="1" readonly>
+                        <option value="Primary">Primary</option>
+                        <option value="Backup">Backup</option>
+                        <option value="VoIP">VoIP</option>
+                        <option value="Other">Other</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <!--/row-->
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="control-label">City*</label>
+                      <input type="text" formControlName="city" class="form-control" readonly>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="control-label">State*</label>
+                      <select class="form-control" data-placeholder="Select State" tabindex="1" readonly>
+                        <option value="state">NC</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="control-label">Status*</label>
+                      <select class="form-control" data-placeholder="Select Status" tabindex="1" readonly="">
+                        <option value="Category 1">Prequal Request Received</option>
+                        <option value="Category 2" selected>Quote Provided</option>
+                        <option value="Category 3">Order Recieved</option>
+                        <option value="Category 4">Order Placed with ISP</option>
+                        <option value="Category 4">Circuit Installed, Details Sent to Customer</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="control-label">Quote Provided</label>
+                      <div class="input-group">
+                        <input type="text" id="quote_provided" class="form-control" value="06-01-2018">
+                        <div class="input-group-append">
                               <span class="input-group-text">
                                 <i class="ti-calendar"></i>
                               </span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-3">
-                        <div class="form-group">
-                          <label class="control-label">Zip Code*</label>
-                          <input type="text" formControlName="zipCode" class="form-control" readonly>
-                        </div>
-                      </div>
-                      <div class="col-md-3">
-                        <div class="form-group">
-                          <label class="control-label">Country</label>
-                          <input type="text" formControlName="country" class="form-control" readonly>
-                        </div>
-                      </div>
-                    </div>
-                    <!--/row-->
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <label class="control-label">Comments</label>
-                          <textarea class="form-control" rows="4" id="comments"></textarea>
                         </div>
                       </div>
                     </div>
                   </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="control-label">Zip Code*</label>
+                      <input type="text" formControlName="zipCode" class="form-control" readonly>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="control-label">Country</label>
+                      <input type="text" formControlName="country" class="form-control" readonly>
+                    </div>
+                  </div>
+                </div>
+                <!--/row-->
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label class="control-label">Comments</label>
+                      <textarea class="form-control" rows="4" id="comments"></textarea>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="row">
-          <div class="col-12">
-            <div class="card">
-              <div class="card-header">
-                Order Information
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+              Order Information
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label class="control-label">Order Received</label>
+                    <div class="input-group">
+                      <input type="text" id="order-recieved" class="form-control" value="06-05-2018">
+                      <div class="input-group-append">
+                          <span class="input-group-text">
+                            <i class="ti-calendar"></i>
+                          </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-md-3">
-                    <div class="form-group">
-                      <label class="control-label">Order Received</label>
-                      <div class="input-group">
-                        <input type="text" id="order-recieved" class="form-control" value="06-05-2018">
-                        <div class="input-group-append">
+
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label class="control-label">Order Placed With ISP</label>
+                    <div class="input-group">
+                      <input type="text" id="order-placed" class="form-control" value="06-07-2018">
+                      <div class="input-group-append">
                           <span class="input-group-text">
                             <i class="ti-calendar"></i>
                           </span>
-                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
+              </div>
 
-                <div class="row">
-                  <div class="col-md-3">
-                    <div class="form-group">
-                      <label class="control-label">Order Placed With ISP</label>
-                      <div class="input-group">
-                        <input type="text" id="order-placed" class="form-control" value="06-07-2018">
-                        <div class="input-group-append">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label class="control-label">Circuit Installed</label>
+                    <div class="input-group">
+                      <input type="text"  class="form-control" appDateTimePicker [dtpTime]="false" [dtpFormat]="'MM-DD-YYYY'">
+                      <div class="input-group-append">
                           <span class="input-group-text">
                             <i class="ti-calendar"></i>
                           </span>
-                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
+              </div>
 
-                <div class="row">
-                  <div class="col-md-3">
-                    <div class="form-group">
-                      <label class="control-label">Circuit Installed</label>
-                      <div class="input-group">
-                        <input type="text" id="circuit-install" class="form-control" value="06-10-2018">
-                        <div class="input-group-append">
-                          <span class="input-group-text">
-                            <i class="ti-calendar"></i>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">
+            Work Log Information
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="control-label">Updated by psrinivasan on 05-28-2018</label>
+                  <label class="control-label">Comments</label>
+                  <textarea class="form-control" rows="2" id="comments" readonly>psrinivasan lorem ipsum</textarea>
                 </div>
+              </div>
+            </div>
 
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="control-label">Updated by kravichandran on 05-26-2018</label>
+                  <label class="control-label">Comments</label>
+                  <textarea class="form-control" rows="2" id="comments" readonly>kravichandran lorem ipsum</textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="control-label">Created by maninesan on 05-25-2018</label>
+                  <label class="control-label">Comments</label>
+                  <textarea class="form-control" rows="2" id="comments" readonly>maninesan lorem ipsum</textarea>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        </form>
-                  <div class="row">
-                    <div class="col-12">
-                      <div class="card">
-                        <div class="card-header">
-                          Work Log Information
-                        </div>
-                        <div class="card-body">
-                          <div class="row">
-                            <div class="col-md-12">
-                              <div class="form-group">
-                                <label class="control-label">Updated by psrinivasan on 05-28-2018</label>
-                                <label class="control-label">Comments</label>
-                                <textarea class="form-control" rows="2" id="comments" readonly>psrinivasan lorem ipsum</textarea>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="row">
-                            <div class="col-md-12">
-                              <div class="form-group">
-                                <label class="control-label">Updated by kravichandran on 05-26-2018</label>
-                                <label class="control-label">Comments</label>
-                                <textarea class="form-control" rows="2" id="comments" readonly>kravichandran lorem ipsum</textarea>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="row">
-                            <div class="col-md-12">
-                              <div class="form-group">
-                                <label class="control-label">Created by maninesan on 05-25-2018</label>
-                                <label class="control-label">Comments</label>
-                                <textarea class="form-control" rows="2" id="comments" readonly>maninesan lorem ipsum</textarea>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-
-
-
-
+      </div>
+    </div>
 
 
   </div>

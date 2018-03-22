@@ -32,6 +32,8 @@ import { UserService } from './services/user.service';
 import { EditCustomerDataService } from './services/edit-customer-data.service';
 import { setupUser } from './services/app-init-provider';
 import { AuthGuardService } from './services/auth-guard.service';
+import {DatePickerDirective} from 'bootstrap-material-datetimepicker';
+import { DateTimePickerDirective } from './directives/date-time-picker.directive';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,8 @@ import { AuthGuardService } from './services/auth-guard.service';
     CustomerListItemComponent,
     CreateUserComponent,
     ProvisionTableComponent,
-    CustomerTableComponent
+    CustomerTableComponent,
+    DateTimePickerDirective
   ],
   imports: [
     BrowserModule,

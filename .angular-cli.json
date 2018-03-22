@@ -20,13 +20,16 @@
       "prefix": "app",
       "styles": [
         "assets/styles/custom-style.scss",
+        "../node_modules/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css",
         "styles.scss"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.js",
         "../node_modules/datatables.net/js/jquery.dataTables.js",
         "../node_modules/chart.js/dist/Chart.js",
-        "../node_modules/hammerjs/hammer.min.js"
+        "../node_modules/hammerjs/hammer.min.js",
+        "../node_modules/moment/min/moment.min.js",
+        "../node_modules/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
