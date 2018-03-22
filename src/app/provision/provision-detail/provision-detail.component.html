@@ -51,7 +51,7 @@
       </div>
     </div>
 
-    <form [formGroup]="provisionForm" #f="ngForm">
+    <form [formGroup]="provisionForm" #f="ngForm" (submit)="updateProvision(f.value)">
       <div class="row">
         <div class="col-12">
           <div class="card">
@@ -170,7 +170,8 @@
                     <div class="form-group">
                       <label class="control-label">Quote Provided</label>
                       <div class="input-group">
-                        <input type="text" id="quote_provided" class="form-control" appDateTimePicker [dtpTime]="false"
+                        <input type="text" id="quote-provided" formControlName="quoteProvidedDate" class="form-control"
+                               appDateTimePicker [dtpTime]="false"
                                [dtpFormat]="'MM-DD-YYYY'">
                         <div class="input-group-append">
                               <span class="input-group-text">
@@ -200,7 +201,7 @@
                   <div class="col-md-12">
                     <div class="form-group">
                       <label class="control-label">Comments</label>
-                      <textarea class="form-control" rows="4" id="comments"></textarea>
+                      <textarea class="form-control" rows="4" id="comments" formControlName="comments"></textarea>
                     </div>
                   </div>
                 </div>
@@ -222,7 +223,8 @@
                   <div class="form-group">
                     <label class="control-label">Order Received</label>
                     <div class="input-group">
-                      <input type="text" id="order-recieved" class="form-control" appDateTimePicker [dtpTime]="false"
+                      <input type="text" id="order-received" formControlName="orderReceivedDate" class="form-control"
+                             appDateTimePicker [dtpTime]="false"
                              [dtpFormat]="'MM-DD-YYYY'">
                       <div class="input-group-append">
                           <span class="input-group-text">
@@ -239,7 +241,8 @@
                   <div class="form-group">
                     <label class="control-label">Order Placed With ISP</label>
                     <div class="input-group">
-                      <input type="text" id="order-placed" class="form-control" appDateTimePicker [dtpTime]="false"
+                      <input type="text" id="order-placed" formControlName="orderPlacedDate" class="form-control"
+                             appDateTimePicker [dtpTime]="false"
                              [dtpFormat]="'MM-DD-YYYY'">
                       <div class="input-group-append">
                           <span class="input-group-text">
@@ -256,7 +259,8 @@
                   <div class="form-group">
                     <label class="control-label">Circuit Installed</label>
                     <div class="input-group">
-                      <input type="text" id="circuit-installed" class="form-control" appDateTimePicker [dtpTime]="false"
+                      <input type="text" id="circuit-installed" formControlName="circuitInstalledDate"
+                             class="form-control" appDateTimePicker [dtpTime]="false"
                              [dtpFormat]="'MM-DD-YYYY'">
                       <div class="input-group-append">
                           <span class="input-group-text">
@@ -272,6 +276,11 @@
           </div>
         </div>
       </div>
+      <div class="form-actions p-b-20" *ngIf="isAdmin">
+        <button type="submit" class="btn btn-success"><span class="fa fa-check"></span> Update</button>
+        <button type="button" class="btn btn-danger" (click)="goBack()"><span class="fa fa-times"></span> Back
+        </button>
+      </div>
     </form>
     <div class="row">
       <div class="col-12">
@@ -285,7 +294,7 @@
                 <div class="form-group">
                   <label class="control-label">Updated by psrinivasan on 05-28-2018</label>
                   <label class="control-label">Comments</label>
-                  <textarea class="form-control" rows="2" id="comments" readonly>psrinivasan lorem ipsum</textarea>
+                  <textarea class="form-control" rows="2" readonly>psrinivasan lorem ipsum</textarea>
                 </div>
               </div>
             </div>
@@ -295,7 +304,7 @@
                 <div class="form-group">
                   <label class="control-label">Updated by kravichandran on 05-26-2018</label>
                   <label class="control-label">Comments</label>
-                  <textarea class="form-control" rows="2" id="comments" readonly>kravichandran lorem ipsum</textarea>
+                  <textarea class="form-control" rows="2" readonly>kravichandran lorem ipsum</textarea>
                 </div>
               </div>
             </div>
@@ -305,7 +314,7 @@
                 <div class="form-group">
                   <label class="control-label">Created by maninesan on 05-25-2018</label>
                   <label class="control-label">Comments</label>
-                  <textarea class="form-control" rows="2" id="comments" readonly>maninesan lorem ipsum</textarea>
+                  <textarea class="form-control" rows="2" readonly>maninesan lorem ipsum</textarea>
                 </div>
               </div>
             </div>

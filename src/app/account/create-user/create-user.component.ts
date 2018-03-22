@@ -4,6 +4,7 @@ import {Router} from '@angular/router';
 import {UserStoreService} from '../../stores/user-store.service';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {GlobalValidator} from '../../common/validator/GlobalValidator';
+import {ConfirmModalService} from '../../services/confirm-modal.service';
 
 @Component({
   selector: 'app-create-user',
@@ -23,7 +24,8 @@ export class CreateUserComponent implements OnInit {
 
   constructor(private _accountService: UserService,
               private _userStore: UserStoreService,
-              private _router: Router) {
+              private _router: Router,
+              private _confirmModal: ConfirmModalService) {
   }
 
   ngOnInit() {
@@ -66,4 +68,8 @@ export class CreateUserComponent implements OnInit {
     return this.createUserForm.get('company');
   }
 
+  // Used in CanDeactivateGuardService
+  canDeactivate() {
+    return this.createUserForm.dirty ? this._confirmModal.confirm() : true;
+  }
 }

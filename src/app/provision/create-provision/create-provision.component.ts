@@ -115,12 +115,6 @@ export class CreateProvisionComponent implements OnInit {
 
   // Used in CanDeactivateGuardService
   canDeactivate() {
-    console.log('i am navigating away');
-
-    if (this.createProvisionForm.dirty) {
-      return this._confirmModal.confirm();
-    }
-
-    return true;
+    return this.createProvisionForm.dirty ? this._confirmModal.confirm() : true;
   }
 }
