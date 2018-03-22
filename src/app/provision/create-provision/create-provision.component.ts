@@ -1,10 +1,10 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {GlobalValidator} from '../../common/validator/GlobalValidator';
 import {User} from '../../common/types/User';
 import {UserStoreService} from '../../stores/user-store.service';
 import {Router} from '@angular/router';
-import {ModalDirective} from 'angular-bootstrap-md/modals/modal.directive';
+import {ConfirmModalService} from '../../services/confirm-modal.service';
 
 @Component({
   selector: 'app-create-provision',
@@ -12,7 +12,6 @@ import {ModalDirective} from 'angular-bootstrap-md/modals/modal.directive';
   styleUrls: ['./create-provision.component.scss']
 })
 export class CreateProvisionComponent implements OnInit {
-  @ViewChild('unsavedFormModal') unsavedFormModal: ModalDirective;
   isCustomer;
   user: User;
 
@@ -35,7 +34,8 @@ export class CreateProvisionComponent implements OnInit {
   });
 
   constructor(private _userStore: UserStoreService,
-              private _router: Router) {
+              private _router: Router,
+              private _confirmModal: ConfirmModalService) {
   }
 
   ngOnInit() {
@@ -113,15 +113,14 @@ export class CreateProvisionComponent implements OnInit {
     console.log(JSON.stringify(provisionForm));
   }
 
-  onCancel() {
-    this.createProvisionForm.dirty ? this.showExitPageModal() : this._router.navigate(['/dash']);
-  }
+  // Used in CanDeactivateGuardService
+  canDeactivate() {
+    console.log('i am navigating away');
 
-  showExitPageModal() {
-    this.unsavedFormModal.show();
-  }
+    if (this.createProvisionForm.dirty) {
+      return this._confirmModal.confirm();
+    }
 
-  exitPage(exit) {
-    exit ? this._router.navigate(['/dash']) : this.unsavedFormModal.hide();
+    return true;
   }
 }

@@ -8,12 +8,13 @@ import { ProvisionDetailComponent } from './provision/provision-detail/provision
 import { CustomerListComponent } from './customer/customer-list/customer-list.component';
 import { CreateUserComponent } from './account/create-user/create-user.component';
 import { AuthGuardService } from './services/auth-guard.service';
+import {CanDeactivateGuardService} from './services/can-deactivate-guard.service';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'dash', component: DashboardComponent, canActivate: [AuthGuardService], data: { roles: ['admin', 'customer'] } },
   { path: 'provisions', component: ProvisionListComponent },
-  { path: 'provision/create', component: CreateProvisionComponent },
+  { path: 'provision/create', component: CreateProvisionComponent, canDeactivate: [CanDeactivateGuardService] },
   { path: 'provision/:id', component: ProvisionDetailComponent },
   { path: 'customers', component: CustomerListComponent },
   { path: 'user/create', component: CreateUserComponent },

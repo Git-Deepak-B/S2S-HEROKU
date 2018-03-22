@@ -134,36 +134,11 @@
               </div>
               <div class="form-actions p-t-20">
                 <button type="submit" class="btn btn-success"><span class="fa fa-check"></span> Save</button>
-                <button type="button" class="btn btn-danger" (click)="onCancel()"><span class="fa fa-times"></span> Cancel</button>
+                <button type="button" class="btn btn-danger" routerLink="/dash"><span class="fa fa-times"></span> Cancel
+                </button>
               </div>
             </form>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div mdbModal #unsavedFormModal="mdb-modal" class="modal fade" id="unsaved-data-modal"
-     tabindex="-1"
-     role="dialog"
-     aria-labelledby="unsaved-data-modal" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Wait a minute ...</h4>
-      </div>
-      <div class="modal-body">
-        <p>You have unsaved changes! If you leave, your changes will be lost!</p>
-      </div>
-      <div class="modal-footer">
-        <div class="col-md-12 text-center">
-          <button type="button" class="btn btn-success" (click)="exitPage(false)">
-            <span class="fa fa-check"></span> Stay
-          </button>
-          <button type="button" class="btn btn-danger" (click)="exitPage(true)">
-            <span class="fa fa-times"></span> Leave
-          </button>
         </div>
       </div>
     </div>

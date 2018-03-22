@@ -33,6 +33,8 @@ import {EditCustomerDataService} from './services/edit-customer-data.service';
 import {setupUser} from './services/app-init-provider';
 import {AuthGuardService} from './services/auth-guard.service';
 import {DateTimePickerDirective} from './directives/date-time-picker.directive';
+import {CanDeactivateGuardService} from './services/can-deactivate-guard.service';
+import {ConfirmModalService} from './services/confirm-modal.service';
 
 @NgModule({
   declarations: [
@@ -84,7 +86,9 @@ import {DateTimePickerDirective} from './directives/date-time-picker.directive';
     ProvisionService,
     UserService,
     EditCustomerDataService,
-    AuthGuardService],
+    AuthGuardService,
+    CanDeactivateGuardService,
+    ConfirmModalService],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA]
 })
