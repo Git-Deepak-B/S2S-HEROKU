@@ -1,12 +1,9 @@
 import {Directive, ElementRef, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import * as moment from 'moment/moment';
+import '../../../node_modules/bootstrap-material-design/js/ripples';
 
 declare var jQuery: any;
-// import * as jquery from 'jquery/dist/jquery';
-import '../../../node_modules/bootstrap-material-design/js/ripples';
-// import 'bootstrap-material-design/dist/js/material.min.js';
-// import '../../../node_modules/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js';
-import '../../../node_modules/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css';
+
 
 @Directive({
   selector: '[appDateTimePicker]'
@@ -71,9 +68,6 @@ export class DateTimePickerDirective implements OnInit {
     });
 
     $element.on('change', () => {
-      console.log(moment().format('MM-DD-YYYY'));
-      console.log(this.dtpFormat);
-      console.log(moment().format(this.dtpFormat));
       this.dateChange.emit(moment($element.val(), this.dtpFormat));
     });
   };

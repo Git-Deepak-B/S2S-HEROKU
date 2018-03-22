@@ -19,4 +19,5 @@ Subject to trigger this modal in one global place?
 9. Auth guard for all the url and check the refresh page
 10. Form validations
 11. request details page - when to enable/disable certain fields???
-12.
+12. bind datepicker to calendar icon in details page
+13. 

@@ -170,7 +170,8 @@
                     <div class="form-group">
                       <label class="control-label">Quote Provided</label>
                       <div class="input-group">
-                        <input type="text" id="quote_provided" class="form-control" value="06-01-2018">
+                        <input type="text" id="quote_provided" class="form-control" appDateTimePicker [dtpTime]="false"
+                               [dtpFormat]="'MM-DD-YYYY'">
                         <div class="input-group-append">
                               <span class="input-group-text">
                                 <i class="ti-calendar"></i>
@@ -221,7 +222,8 @@
                   <div class="form-group">
                     <label class="control-label">Order Received</label>
                     <div class="input-group">
-                      <input type="text" id="order-recieved" class="form-control" value="06-05-2018">
+                      <input type="text" id="order-recieved" class="form-control" appDateTimePicker [dtpTime]="false"
+                             [dtpFormat]="'MM-DD-YYYY'">
                       <div class="input-group-append">
                           <span class="input-group-text">
                             <i class="ti-calendar"></i>
@@ -237,7 +239,8 @@
                   <div class="form-group">
                     <label class="control-label">Order Placed With ISP</label>
                     <div class="input-group">
-                      <input type="text" id="order-placed" class="form-control" value="06-07-2018">
+                      <input type="text" id="order-placed" class="form-control" appDateTimePicker [dtpTime]="false"
+                             [dtpFormat]="'MM-DD-YYYY'">
                       <div class="input-group-append">
                           <span class="input-group-text">
                             <i class="ti-calendar"></i>
@@ -253,7 +256,8 @@
                   <div class="form-group">
                     <label class="control-label">Circuit Installed</label>
                     <div class="input-group">
-                      <input type="text"  class="form-control" appDateTimePicker [dtpTime]="false" [dtpFormat]="'MM-DD-YYYY'">
+                      <input type="text" id="circuit-installed" class="form-control" appDateTimePicker [dtpTime]="false"
+                             [dtpFormat]="'MM-DD-YYYY'">
                       <div class="input-group-append">
                           <span class="input-group-text">
                             <i class="ti-calendar"></i>
