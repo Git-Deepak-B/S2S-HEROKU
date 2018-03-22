@@ -6,6 +6,7 @@ import {UserStoreService} from '../../stores/user-store.service';
 import {User} from '../../common/types/User';
 import {FormGroup, FormControl, Validators} from '@angular/forms';
 import {ConfirmModalService} from '../../services/confirm-modal.service';
+import {STATE_LIST} from '../../../assets/data/state-list';
 
 @Component({
   selector: 'app-provision-detail',
@@ -16,6 +17,7 @@ export class ProvisionDetailComponent implements OnInit {
   isAdmin;
   user: User;
   provision;
+  stateList = STATE_LIST;
 
   provisionForm = new FormGroup({
     company: new FormControl('', [Validators.required]),
@@ -50,7 +52,6 @@ export class ProvisionDetailComponent implements OnInit {
               private _location: Location,
               private _userStore: UserStoreService,
               private _confirmModal: ConfirmModalService) {
-
   }
 
   ngOnInit() {
@@ -71,7 +72,7 @@ export class ProvisionDetailComponent implements OnInit {
           addressLine1: this.provision.location.addressLine1,
           addressLine2: this.provision.location.addressLine2,
           city: this.provision.location.city,
-          state: this.provision.location.state,
+          state: this.provision.location.state, // TODO state is not getting selected correctly
           zipCode: this.provision.location.zipCode,
           country: this.provision.location.country,
           circuitPurpose: this.provision.circuitPurpose,

@@ -5,6 +5,7 @@ import {User} from '../../common/types/User';
 import {UserStoreService} from '../../stores/user-store.service';
 import {Router} from '@angular/router';
 import {ConfirmModalService} from '../../services/confirm-modal.service';
+import {STATE_LIST} from '../../../assets/data/state-list';
 
 @Component({
   selector: 'app-create-provision',
@@ -14,6 +15,7 @@ import {ConfirmModalService} from '../../services/confirm-modal.service';
 export class CreateProvisionComponent implements OnInit {
   isCustomer;
   user: User;
+  stateList = STATE_LIST;
 
   createProvisionForm = new FormGroup({
     company: new FormControl(this.isCustomer ? this.user.company : '', [Validators.required]),

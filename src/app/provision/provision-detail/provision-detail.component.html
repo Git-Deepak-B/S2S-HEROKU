@@ -149,8 +149,8 @@
                   <div class="col-md-3">
                     <div class="form-group">
                       <label class="control-label">State*</label>
-                      <select class="form-control" data-placeholder="Select State" tabindex="1" readonly>
-                        <option value="state">NC</option>
+                      <select class="form-control" data-placeholder="Select State" tabindex="1" readonly disabled>
+                        <option *ngFor="let state of stateList" [value]="state.code">{{state.text}}</option>
                       </select>
                     </div>
                   </div>

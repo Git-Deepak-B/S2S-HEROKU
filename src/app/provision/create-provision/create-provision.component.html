@@ -103,7 +103,7 @@
                       <label class="control-label required">State</label>
                       <select class="form-control" formControlName="state" data-placeholder="Select State"
                               tabindex="1">
-                        <option value="state">NC</option>
+                        <option *ngFor="let state of stateList" [value]="state.code">{{state.text}}</option>
                       </select>
                     </div>
                   </div>
