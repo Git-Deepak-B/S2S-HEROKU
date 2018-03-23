@@ -4,7 +4,7 @@ import {GlobalValidator} from '../../common/validator/GlobalValidator';
 import {User} from '../../common/types/User';
 import {UserStoreService} from '../../stores/user-store.service';
 import {Router} from '@angular/router';
-import {ConfirmModalService} from '../../services/confirm-modal.service';
+import {ConfirmModalService} from '../../common/modals/confirm-modal/confirm-modal.service';
 import {STATE_LIST} from '../../../assets/data/state-list';
 
 @Component({

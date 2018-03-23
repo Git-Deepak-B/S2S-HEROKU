@@ -4,7 +4,7 @@ import {Router} from '@angular/router';
 import {UserStoreService} from '../../stores/user-store.service';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {GlobalValidator} from '../../common/validator/GlobalValidator';
-import {ConfirmModalService} from '../../services/confirm-modal.service';
+import {ConfirmModalService} from '../../common/modals/confirm-modal/confirm-modal.service';
 
 @Component({
   selector: 'app-create-user',

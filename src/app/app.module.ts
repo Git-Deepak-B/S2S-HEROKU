@@ -34,9 +34,10 @@ import {setupUser} from './services/app-init-provider';
 import {AuthGuardService} from './services/auth-guard.service';
 import {DateTimePickerDirective} from './directives/date-time-picker.directive';
 import {CanDeactivateGuardService} from './services/can-deactivate-guard.service';
-import {ConfirmModalService} from './services/confirm-modal.service';
+import {ConfirmModalService} from './common/modals/confirm-modal/confirm-modal.service';
 import { OverlaySpinnerComponent } from './common/overlay-spinner/overlay-spinner.component';
 import {SpinnerService} from './common/overlay-spinner/spinner.service';
+import { ConfirmModalComponent } from './common/modals/confirm-modal/confirm-modal.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import {SpinnerService} from './common/overlay-spinner/spinner.service';
     ProvisionTableComponent,
     CustomerTableComponent,
     DateTimePickerDirective,
-    OverlaySpinnerComponent
+    OverlaySpinnerComponent,
+    ConfirmModalComponent
   ],
   imports: [
     BrowserModule,

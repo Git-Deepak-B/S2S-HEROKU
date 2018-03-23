@@ -5,7 +5,7 @@ import {Location} from '@angular/common';
 import {UserStoreService} from '../../stores/user-store.service';
 import {User} from '../../common/types/User';
 import {FormGroup, FormControl, Validators} from '@angular/forms';
-import {ConfirmModalService} from '../../services/confirm-modal.service';
+import {ConfirmModalService} from '../../common/modals/confirm-modal/confirm-modal.service';
 import {STATE_LIST} from '../../../assets/data/state-list';
 
 @Component({

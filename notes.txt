@@ -20,5 +20,5 @@ Subject to trigger this modal in one global place?   ---- DONE
 10. Form validations
 11. request details page - when to enable/disable certain fields???
 12. bind datepicker to calendar icon in details page
-13. show state list in all applicable pages
+13. show state list in all applicable pages       -- DONE
 14. Hamburger menu not working.

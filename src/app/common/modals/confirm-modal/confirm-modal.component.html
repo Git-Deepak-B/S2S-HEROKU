@@ -1,0 +1,26 @@
+<div mdbModal #unsavedFormModal="mdb-modal" class="modal fade" id="unsaved-data-modal"
+     tabindex="-1"
+     role="dialog"
+     aria-labelledby="unsaved-data-modal" aria-hidden="true"
+     [config]="{ignoreBackdropClick : true, keyboard : false}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Wait a minute ...</h4>
+      </div>
+      <div class="modal-body">
+        <p>You have unsaved changes! If you leave, your changes will be lost!</p>
+      </div>
+      <div class="modal-footer">
+        <div class="col-md-12 text-center">
+          <button type="button" class="btn btn-success" (click)="onUserResponse(false)">
+            <span class="fa fa-check"></span> Stay
+          </button>
+          <button type="button" class="btn btn-danger" (click)="onUserResponse(true)">
+            <span class="fa fa-times"></span> Leave
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
