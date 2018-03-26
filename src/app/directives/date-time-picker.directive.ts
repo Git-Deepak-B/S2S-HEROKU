@@ -1,6 +1,6 @@
 import {Directive, ElementRef, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import * as moment from 'moment/moment';
-import '../../../node_modules/bootstrap-material-design/js/ripples';
+import '../node_modules/bootstrap-material-design/js/ripples';
 
 declare var jQuery: any;
 
